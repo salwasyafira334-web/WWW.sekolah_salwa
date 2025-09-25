@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMK Negeri 7 Batam</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Roboto', sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #f8f9fa; 
+            overflow-x: hidden;
+        }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
+        
+        /* Header */
+        .header { 
+            background: linear-gradient(135deg, #003366 0%, #0056b3 100%); 
+            color: white; 
+            text-align: center; 
+            padding: 60px 20px; 
+            position: relative;
+            animation: fadeIn 1s ease-in;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://via.placeholder.com/1920x400?text=SMK+Negeri+7+Batam') center/cover;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        .header h1 { font-size: 3em; margin-bottom: 10px; }
+        .header h2 { font-size: 1.5em; margin-bottom: 20px; }
+        .header p { font-size: 1.1em; max-width: 800px; margin: 0 auto; }
+        
+        /* Navigation */
+        nav { 
+            background: rgba(0, 51, 102, 0.9); 
+            padding: 15px 0; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000;
+        }
+        nav ul { 
+            list-style: none; 
+            display: flex; 
+            justify-content: center; 
+            flex-wrap: wrap;
+        }
+        nav li { margin: 0 20px; }
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            font-weight: bold; 
+            transition: color 0.3s; 
+        }
+        nav a:hover { color: #28a745; }
+        
+        /* Stats */
+        .stats { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 20px; 
+            padding: 40px 20px; 
+            background: white;
+        }
+        .stat-item { 
+            text-align: center; 
+            padding: 20px; 
+            background: linear-gradient(145deg, #f0f8ff, #e6f3ff); 
+            border-radius: 15px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .stat-item:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2); 
+        }
+        .stat-item h3 { font-size: 2.5em; color: #003366; margin-bottom: 10px; }
+        .stat-item p { font-weight: bold; color: #666; }
+        
+        /* Sections */
+        .section { 
+            max-width: 1200px; 
+            margin: 40px auto; 
+            padding: 30px; 
+            background: white; 
+            border-radius: 15px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+            animation: fadeInUp 1s ease-out;
+        }
+        .section h2 { 
+            color: #003366; 
+            font-size: 2em; 
+            margin-bottom: 20px; 
+            text-align: center; 
+            border-bottom: 3px solid #28a745; 
+            padding-bottom: 10px;
+        }
+        .section h3 { color: #0056b3; margin-bottom: 15px; text-align: center; }
+        .section ul { list-style: none; padding-left: 0; }
+        .section li { 
+            padding: 10px; 
+            margin: 10px 0; 
+            background: #f8f9fa; 
+            border-left: 4px solid #28a745; 
+            border-radius: 5px;
+        }
+        .english { 
+            font-style: italic; 
+            color: #666; 
+            text-align: center; 
+            font-size: 1.1em; 
+            margin-top: 10px;
+        }
+        
+        /* Berita Section */
+        .news { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 20px; 
+        }
+        .news-item { 
+            padding: 20px; 
+            background: #e9ecef; 
+            border-radius: 10px; 
+            transition: background 0.3s;
+        }
+        .news-item:hover { background: #d4edda; }
+        
+        /* Footer */
+        footer { 
+            background: #003366; 
+            color: white; 
+            text-align: center; 
+            padding: 30px; 
+            margin-top: 50px;
+        }
+        footer a { color: #28a745; text-decoration: none; }
+        
+        /* Animations */
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2em; }
+            .stats { grid-template-columns: 1fr; }
+            .section { margin: 20px; padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#profil">Profil</a></li>
+            <li><a href="#keahlian">Keahlian</a></li>
+            <li><a href="#berita">Berita</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <div class="header" id="home">
+        <h1>SMK Negeri 7 Batam</h1>
+        <h2>SELAMAT DATANG di</h2>
+        <p>SMK Negeri 7 Batam Mewujudkan Peserta Didik yang Beriman, Bertaqwa kepada TUHAN YANG MAHA ESA dan Berakhlak Mulia, Terampil, Unggul, dan Berdaya Saing Global di Era Teknologi Digital.</p>
+    </div>
+
+    <div class="stats">
+        <div class="stat-item">
+            <h3>40</h3>
+            <p>GURU DAN TENAGA KEPENDIDIKAN</p>
+        </div>
+        <div class="stat-item">
+            <h3>25</h3>
+            <p>ROMBEL</p>
+        </div>
+        <div class="stat-item">
+            <h3>6</h3>
+            <p>KONSENTRASI KEAHLIAN</p>
+        </div>
+        <div class="stat-item">
+            <h3>1.600</h3>
+            <p>PESERTA DIDIK</p>
+        </div>
+    </div>
+
+    <div class="section" id="profil">
+        <h2>KATA SAMBUTAN</h2>
+        <h3>KEPALA SMK NEGERI 7 BATAM</h3>
+        <p>Kepala SMK Negeri 7 Batam</p>
+        <img src="https://via.placeholder.com/400x300?text=Kepala+Sekolah" alt="Foto Kepala Sekolah" style="width:100%; max-width:400px; margin:20px auto; display:block; border-radius:10px;">
+    </div>
+
+    <div class="section">
+        <h2>IDENTITAS SEKOLAH</h2>
+        <ul>
+            <li>Akreditasi: A</li>
+            <li>Kurikulum: Kurikulum Merdeka</li>
+            <li>NPSN: 69774885</li>
+            <li>Status: Negeri</li>
+            <li>Bentuk Pendidikan: SMK</li>
+            <li>Status Kepemilikan: Pemerintah Daerah</li>
+            <li>SK Pendirian Sekolah: KPTS.367/HK/IX/2014</li>
+            <li>Tanggal SK Pendirian: 2014-09-05</li>
+            <li>SK Izin Operasional: KPTS.367/HK/IX/2014</li>
+            <li>Tanggal SK Izin Operasional: 2015-10-23</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>INOVATIF</h2>
+        <p>Konsentrasi Unggulan SMK Negeri 7 Batam</p>
+        <p class="english">Pioneering Solutions and Innovations</p>
+        <img src="https://via.placeholder.com/600x300?text=Inovasi+SMK" alt="Inovasi" style="width:100%; border-radius:10px;">
+    </div>
+
+    <div class="section">
+        <h2>BERBUDAYA</h2>
+        <p class="english">Diverse Ethnicities and Religions</p>
+        <img src="https://via.placeholder.com/600x300?text=Budaya" alt="Budaya" style="width:100%; border-radius:10px;">
+    </div>
+
+    <div class="section" id="keahlian">
+        <h2>KONSENTRASI KEAHLIAN</h2>
+        <p>Konsentrasi Unggulan SMK Negeri 7 Batam</p>
+    </div>
+
+    <div class="section">
+        <h2>Rencana Aksi Program SMK Pusat Keunggulan</h2>
+        <p>SMK Negeri 7 Batam, SMK Pusat Keunggulan</p>
+        <ul>
+            <li>Mengembangkan kerjasama dengan DUDIKA</li>
+            <li>Memiliki kelas industri untuk semua konsentrasi keahlian</li>
+            <li>Memiliki Lembaga Sertifikasi Profesi</li>
+        </ul>
+    </div>
+
+    <div class="section" id="berita">
+        <h2>SMK NEGERI 7 BATAM</h2>
+        <h3>Berita Terbaru</h3>
+        <div class="news">
+            <div class="news-item">
+                <h4>Berita 1</h4>
+                <p>Deskripsi singkat berita terbaru. <a href="#">Baca Selengkapnya</a></p>
+            </div>
+            <div class="news-item">
+                <h4>Berita 2</h4>
+                <p>Deskripsi singkat berita terbaru. <a href="#">Baca Selengkapnya</a></p>
+            </div>
+            <div class="news-item">
+                <h4>Berita 3</h4>
+                <p>Deskripsi singkat berita terbaru. <a href="#">Baca Selengkapnya</a></p>
+            </div>
+        </div>
+    </div>
+
+    <footer id="kontak">
+        <p>&copy; 2023 SMK Negeri 7 Batam. Alamat: Jl. Contoh No. 123, Batam. Telp: (0778) 123456 | Email: info@smk7batam.sch.id</p>
+        <p>Ikuti kami: <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">YouTube</a></p>
+    </footer>
+
+</body>
+</html>
